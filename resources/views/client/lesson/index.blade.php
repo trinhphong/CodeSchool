@@ -8,9 +8,9 @@
     <div class="row" style="height: 100%">
         <div class="col-sm-5 col-xs-6" style="padding: 0px; height: 100%">
             <div class="panel panel-primary" style="height: 100%; margin: 0">
-                <h4 class="panel-title" style="padding-top: 20px">
+                <div class="panel-title" style="padding-top: 20px">
                     Panel Tittle
-                </h4>
+                </div>
                 <div class="panel-body">
                     <div class="panel-content">
                         <p>Mo Ta Bai Hoc O Day</p>
