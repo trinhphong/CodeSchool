@@ -19,3 +19,12 @@ const app = new Vue({
     el: '#app'
 });
 */
+
+$(document).ready(function() {
+    $( "#btn" ).click(function() {
+        alert( "Handler for .click() called." );
+        var myFrame = $("#myframe").contents().find('body');
+        var textareaValue = $("textarea").val();
+        myFrame.html(textareaValue);
+    });
+});

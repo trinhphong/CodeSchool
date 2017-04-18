@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('mirror', function () {
-    return view('/client/mirror/index');
+Route::get('lesson', function () {
+    return view('/client/lesson/index');
 });
