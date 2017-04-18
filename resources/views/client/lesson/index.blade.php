@@ -37,18 +37,22 @@
 
         <div class="col-sm-7 col-xs-6" style="padding: 0px; height: 100%">
             <div style="height:50%">
-                <textarea style="height:50%" id="editor-form"></textarea>
+                <form id="editor-form" style="height: 100%; background-color: black">
+                    <textarea id="editor"></textarea>
+                    <button class="btn btn-success btn-sm pull-right" type="submit" style="margin-right: 20px; margin-top: 5px">
+                        Submit
+                    </button>
+                </form>
             </div>
 
-
-            <div>
-                <iframe></iframe>
+            <div style="height: 50%">
+                <iframe id="result-content" style="height: 99%;width: 100%"></iframe>
             </div>
         </div>
     </div>
     <script>
 
-        var editor = CodeMirror.fromTextArea(document.getElementById("editor-form"), {
+        var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
             mode: "text/html",
             tabMode: "indent",
             theme: "dracula",

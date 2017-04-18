@@ -11237,13 +11237,26 @@ const app = new Vue({
 });
 */
 
-$(document).ready(function () {
-    $("#btn").click(function () {
-        alert("Handler for .click() called.");
+/*
+$(document).ready(function() {
+    $( "#btn" ).click(function() {
+        alert( "Handler for .click() called." );
         var myFrame = $("#myframe").contents().find('body');
         var textareaValue = $("textarea").val();
         myFrame.html(textareaValue);
     });
+});
+*/
+
+$(document).ready(function () {
+   $("#editor-form").submit(function (e) {
+      e.preventDefault();
+      var codeText = $('#editor').val();
+      var result = $('#result-content');
+      result.ready(function () {
+         result.contents().find("body").html(codeText);
+      });
+   });
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
