@@ -18,3 +18,11 @@ Route::get('/', function () {
 Route::get('lesson', function () {
     return view('/client/lesson/index');
 });
+
+Route::get('admin',function () {
+   return view('/admin/master/master');
+});
+
+Route::get('login',function () {
+   return view('/shared/login');
+});
