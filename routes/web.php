@@ -15,14 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('lesson', function () {
-    return view('/client/lesson/index');
-});
+Auth::routes();
 
-Route::get('admin',function () {
-   return view('/admin/login/admin_login');
-});
+//Route::get('lesson', function () {
+//    return view('/client/lesson/index');
+//});
+//
+//Route::get('admin',function () {
+//   return view('/admin/login/admin_login');
+//});
+//
+//Route::get('login',function () {
+//   return view('/client/login/user_login');
+//});
 
-Route::get('login',function () {
-   return view('/client/login/user_login');
-});
+Route::get('/home', 'HomeController@index');
+Route::get('/admin', 'AdminController@index');
