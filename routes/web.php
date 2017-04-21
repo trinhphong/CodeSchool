@@ -20,9 +20,9 @@ Route::get('lesson', function () {
 });
 
 Route::get('admin',function () {
-   return view('/admin/master/master');
+   return view('/admin/login/admin_login');
 });
 
 Route::get('login',function () {
-   return view('/shared/login');
+   return view('/client/login/user_login');
 });

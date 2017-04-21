@@ -7,7 +7,7 @@
     <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:600'>
 
     <link href="{{ asset('css/shared/login.css') }}" rel="stylesheet">
-
+    
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         <div class="login-form">
             <div class="sign-in-htm">
                 <div class="group">
-                    <label for="user" class="label">Username</label>
+                    <label for="user" class="label">Email</label>
                     <input id="user" type="text" class="input">
                 </div>
                 <div class="group">
