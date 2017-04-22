@@ -8,9 +8,9 @@ use Auth;
 
 class AdminLoginController extends Controller
 {
-    public function __contruct()
+    public function __construct()
     {
-        $this->middleware('guest::admin');
+        $this->middleware('guest:admin');
     }
 
     public function showLoginForm()
@@ -26,8 +26,8 @@ class AdminLoginController extends Controller
         ]);
 
         if ( Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
-            return redirect()->intended('admin.dashboard');
+            return redirect()->intended(route('admin.dashboard'));
         }
-        return redirect()->back()->withInput($request)->only('email','remember');
+        return redirect()->back()->withInput($request->only('email','remember'));
     }
 }

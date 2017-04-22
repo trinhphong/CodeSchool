@@ -1,10 +1,37 @@
-@extends('client.master.master')
+<!DOCTYPE html>
+<html lang="{{ config('app.locale') }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@section('tittle')
-    test tittle
-    @endsection
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-@section('content')
+    <title>{{ config('app.name') }}</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('codemirrormini/lib/codemirror.css') }}" rel="stylesheet">
+    <link href="{{ asset('codemirrormini/theme/dracula.css') }}" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script>
+        window.Laravel = {!! json_encode([
+            'csrfToken' => csrf_token(),
+        ]) !!};
+    </script>
+    <script src="{{ asset('codemirrormini/lib/codemirror.js') }}"></script>
+    <script src="{{ asset('codemirrormini/mode/css/css.js') }}"></script>
+    <script src="{{ asset('codemirrormini/mode/xml/xml.js') }}"></script>
+    <script src="{{ asset('codemirrormini/mode/htmlmixed/htmlmixed.js') }}"></script>
+    <script src="{{ asset('codemirrormini/mode/javascript/javascript.js') }}"></script>
+</head>
+<body>
+<div class="container-fluid" style="height: 100%">
     <div class="row" style="height: 100%">
         <div class="col-sm-5 col-xs-6" style="padding: 0px; height: 100%">
             <div class="panel panel-primary" style="height: 100%; margin: 0">
@@ -50,13 +77,17 @@
             </div>
         </div>
     </div>
-    <script>
+</div>
+<script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+        mode: "text/html",
+        tabMode: "indent",
+        theme: "dracula",
+        lineNumbers: true
+    });
+</script>
 
-        var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
-            mode: "text/html",
-            tabMode: "indent",
-            theme: "dracula",
-            lineNumbers: true
-        });
-    </script>
-    @endsection
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
+</body>
+</html>

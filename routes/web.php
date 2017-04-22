@@ -21,10 +21,10 @@ Auth::routes();
 //    return view('/client/lesson/index');
 //});
 //
-//Route::get('admin',function () {
-//   return view('/admin/login/admin_login');
+//Route::get('adminform',function () {
+//   return view('/admin/master/master');
 //});
-//
+
 //Route::get('login',function () {
 //   return view('/client/login/user_login');
 //});

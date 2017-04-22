@@ -13,9 +13,9 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background: url("http://www.freeimageslive.co.uk/files/images008/school_background.jpg");
+                background-size: cover;
                 color: #636b6f;
-                font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
@@ -60,6 +60,7 @@
             }
 
             .m-b-md {
+                margin-left: 800px;
                 margin-bottom: 30px;
             }
         </style>
@@ -71,23 +72,22 @@
                     @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
+                        <a style="color: white; font-size: large" href="{{ url('/login') }}">Login</a>
+                        <a style="color: white; font-size: large" href="{{ url('/register') }}">Register</a>
                     @endif
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <p style="color: greenyellow">CODE SCHOOL</p>
+                    <p style="color: yellow">HTML/CSS</p>
+                    <p style="color: lawngreen">Front-end Foundations</p>
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="links m-b-md">
+                    <a style="color: black; font-size: large" href="https://www.codeschool.com/courses/front-end-foundations" target="_blank">Web Tham Khảo</a>
+                    <a style="color: black; font-size: large" href="https://github.com/trinhphong/CodeSchool" target="_blank">My Source Code GitHub</a>
                 </div>
             </div>
         </div>
