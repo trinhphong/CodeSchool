@@ -5,12 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Let's Code!!!</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
+        <link rel="icon" type="image/gif" href="http://www.iconshock.com/img_jpg/SUPERVISTA/video_production/jpg/24/title_icon.jpg" />
         <style>
             html, body {
                 background: url("http://www.freeimageslive.co.uk/files/images008/school_background.jpg");
