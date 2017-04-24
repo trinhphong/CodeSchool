@@ -14,9 +14,9 @@ class CreateSolutionsTable extends Migration
     public function up()
     {
         Schema::create('solutions', function (Blueprint $table) {
-            $table->increments('solution_id');
-            $table->string('solution_name');
-            $table->longText('solution_content');
+            $table->increments('id');
+            $table->string('name');
+            $table->longText('content');
             $table->timestamps();
         });
     }

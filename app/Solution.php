@@ -8,7 +8,7 @@ class Solution extends Model
 {
     protected $table = 'solutions';
 
-    protected $fillable = ['solution_id','solution_name','solution_content'];
+    protected $fillable = ['id','name','content'];
 
     public $timestamps = false;
 

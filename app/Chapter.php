@@ -8,7 +8,7 @@ class Chapter extends Model
 {
     protected $table = 'chapters';
 
-    protected $fillable = ['chapter_id','chapter_name','level_id','video_id'];
+    protected $fillable = ['id','name','level_id','video_id'];
 
     public $timestamps = false;
 

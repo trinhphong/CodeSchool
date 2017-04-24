@@ -14,14 +14,14 @@ class CreateChallengesTable extends Migration
     public function up()
     {
         Schema::create('challenges', function (Blueprint $table) {
-            $table->increments('challenge_id');
-            $table->string('challenge_name');
-            $table->longText('challenge_content');
-            $table->longText('challenge_source_code');
+            $table->increments('id');
+            $table->string('name');
+            $table->longText('content');
+            $table->longText('source_code');
             $table->integer('type_challenge_id')->unsigned();
-            $table->foreign('type_challenge_id')->references('type_challenge_id')->on('type_challenges')->onDelete('cascade');
+            $table->foreign('type_challenge_id')->references('id')->on('type_challenges')->onDelete('cascade');
             $table->integer('chapter_id')->unsigned();
-            $table->foreign('chapter_id')->references('chapter_id')->on('chapters')->onDelete('cascade');
+            $table->foreign('chapter_id')->references('id')->on('chapters')->onDelete('cascade');
             $table->timestamps();
         });
     }

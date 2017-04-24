@@ -14,8 +14,8 @@ class CreateTypechallengesTable extends Migration
     public function up()
     {
         Schema::create('type_challenges', function (Blueprint $table) {
-            $table->increments('type_challenge_id');
-            $table->string('type_challenge_name');
+            $table->increments('id');
+            $table->string('name');
             $table->timestamps();
         });
     }

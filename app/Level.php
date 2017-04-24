@@ -8,7 +8,7 @@ class Level extends Model
 {
     protected $table = 'levels';
 
-    protected $fillable = ['level_id','level_name','level_description','level_note','level_image','course_id','slide_id'];
+    protected $fillable = ['id','name','description','note','image','course_id','slide_id'];
 
     public $timestamps = false;
 

@@ -11,22 +11,16 @@
                 <div class="sidebar content-box" style="display: block">
                     <ul class="nav">
                         <li>
-                            <a href="index.html">
+                            <a href="/admin">
                                 <i class="glyphicon glyphicon-dashboard"></i>
                                 Bảng Điều Khiển
                             </a>
                         </li>
-                        <li class="submenu">
-                            <a href="#">
+                        <li>
+                            <a href="/admin/manager/course">
                                 <i class="glyphicon glyphicon-book"></i>
                                 Quản Lý Bài Học
-                                <span class="caret pull-right"></span>
                             </a>
-                            <ul style="display: none;">
-                                <li><a href="insert.html">Thêm Bài Học</a></li>
-                                <li><a href="delete.html">Xóa Bài Học</a></li>
-                                <li><a href="update.html">Sửa Bài Học</a></li>
-                            </ul>
                         </li>
                         <li>
                             <a href="student.html">

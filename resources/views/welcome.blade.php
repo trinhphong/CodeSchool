@@ -14,7 +14,7 @@
         <link rel="icon" type="image/gif" href="http://www.iconshock.com/img_jpg/SUPERVISTA/video_production/jpg/24/title_icon.jpg" />
         <style>
             html, body {
-                background: url("http://www.freeimageslive.co.uk/files/images008/school_background.jpg");
+                background: url("{{asset('image/school_background.jpg')}}");
                 background-size: cover;
                 color: #636b6f;
                 font-weight: 100;
@@ -71,7 +71,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a style="color: white; font-size: large" href="{{ url('/home') }}">Home</a>
                     @else
                         <a style="color: white; font-size: large" href="{{ url('/login') }}">Login</a>
                         <a style="color: white; font-size: large" href="{{ url('/register') }}">Register</a>

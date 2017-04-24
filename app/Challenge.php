@@ -8,7 +8,7 @@ class Challenge extends Model
 {
     protected $table = 'challenges';
 
-    protected $fillable = ['challenge_id','challenge_name','challenge_content','challenge_source_code','type_challenge_id','chapter_id'];
+    protected $fillable = ['id','name','content','source_code','type_challenge_id','chapter_id'];
 
     public $timestamps = false;
 
