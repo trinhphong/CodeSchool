@@ -4,7 +4,7 @@
         <div class="content-box-large">
             <div class="panel-heading">
                 <div class="panel-title">
-                    <h3>Quản lý Course</h3>
+                    <h3>Quản lý Level</h3>
                 </div>
             </div>
             <div class="panel-body">
@@ -23,7 +23,12 @@
                             <td>{{$level->id}}</td>
                             <td>{{$level->name}}</td>
                             <td>{{$level->description}}</td>
-                            <td></td>
+                            <td>
+                                <a href="{{ route('level.create') }}" class="btn btn-primary">
+                                    Create
+                                    <span><i class="glyphicon glyphicon-edit"></i></span>
+                                </a>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>

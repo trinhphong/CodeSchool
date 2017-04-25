@@ -38,4 +38,5 @@ Route::prefix('admin')->group(function (){
     Route::get('/manager/course', 'CourseController@index')->name('admin.course');
     Route::resource('course','CourseController');
     Route::resource('level','LevelController');
+    Route::get('/level/{id}/course','LevelController@index')->name('level.index');
 });

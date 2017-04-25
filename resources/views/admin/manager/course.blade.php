@@ -22,8 +22,15 @@
                             <td>{{$course->id}}</td>
                             <td>{{$course->language}}</td>
                             <td>{{$course->name}}</td>
-                            <td>{{link_to_route('course.edit','Edit',[$course->id],['class'=>'btn btn-primary'])}}</td>
-                            <td>{{link_to_route('level.index','Quản Lý Level',[$course->id],['class'=>'btn btn-danger'])}}</td>
+                            <td>
+                                <a href="{{ route('course.edit', $course->id) }}" class="btn btn-primary">
+                                    Edit
+                                    <span><i class="glyphicon glyphicon-edit"></i></span>
+                                </a>
+                                <a href="{{ route('level.index', $course->id) }}" class="btn btn-danger">
+                                    Quản Lý Level
+                                    <span><i class="glyphicon glyphicon-briefcase"></i></span>
+                                </a></td>
                         </tr>
                     </tbody>
                 </table>

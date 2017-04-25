@@ -13,12 +13,17 @@ class LevelController extends Controller
         $this->middleware('auth:admin');
     }
 
-    public function index()
+    public function index($courseId)
     {
-        $levels = Level::all();
+        $levels = Level::where('course_id',$courseId)->get();
         return view('admin/level/index')->with([
             'levels' => $levels,
         ]);
+    }
+
+    public function create()
+    {
+        return view('admin/level/create');
     }
 
     public function edit(Level $level)
