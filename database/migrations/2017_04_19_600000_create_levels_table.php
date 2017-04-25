@@ -17,7 +17,7 @@ class CreateLevelsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->longText('description');
-            $table->text('note');
+            $table->text('note')->nullable();
             $table->string('image');
             $table->integer('course_id')->unsigned();
             $table->foreign('course_id')->references('id')->on('course')->onDelete('cascade');

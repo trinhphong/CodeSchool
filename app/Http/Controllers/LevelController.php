@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Course;
 use App\Level;
 use Illuminate\Http\Request;
+use App\Http\Requests\CreateLevelRequest;
 
 class LevelController extends Controller
 {
@@ -24,6 +24,19 @@ class LevelController extends Controller
     public function create()
     {
         return view('admin/level/create');
+    }
+
+    public function store(CreateLevelRequest $request)
+    {
+        Level::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'note' => $request->note,
+            'image' => $request->image,
+            'course_id' => $request->course_id,
+            'slide_id' => $request->slide_id
+        ]);
+        return redirect()->route('level.index','1')->with('message','Add Level successfully');
     }
 
     public function edit(Level $level)

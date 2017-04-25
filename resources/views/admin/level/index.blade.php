@@ -24,8 +24,8 @@
                             <td>{{$level->name}}</td>
                             <td>{{$level->description}}</td>
                             <td>
-                                <a href="{{ route('level.create') }}" class="btn btn-primary">
-                                    Create
+                                <a href="{{ route('course.edit', $level->id) }}" class="btn btn-primary">
+                                    Edit
                                     <span><i class="glyphicon glyphicon-edit"></i></span>
                                 </a>
                             </td>
@@ -33,6 +33,10 @@
                         @endforeach
                     </tbody>
                 </table>
+                <a href="{{ route('level.create') }}" class="btn btn-primary">
+                    Create
+                    <span><i class="glyphicon glyphicon-edit"></i></span>
+                </a>
                 @if(Session::has('message'))
                     <div class="alert alert-success">{{Session::get('message')}}</div>
                 @endif

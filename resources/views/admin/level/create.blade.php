@@ -4,27 +4,47 @@
         <div class="content-box-large">
             <div class="panel-heading">
                 <div class="panel-title">
-                    <h3>Update Course</h3>
+                    <h3>Create Level</h3>
                 </div>
             </div>
             <div class="panel-body">
-                {!! Form::model($course, array('route'=>['course.update',$course->id],'method'=>'PUT')) !!}
+                {!! Form::open(array('route'=>'level.store')) !!}
                 <div class="form-group">
-                    {!! Form::label('name','Name Course') !!}
+                    {!! Form::label('name','Level Name') !!}
                     {!! Form::text('name',null,['class'=>'form-control']) !!}
-                </div>
-                <div class="form-group">
-                    {!! Form::label('language','Language') !!}
-                    {!! Form::text('language',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('description','Description') !!}
                     {!! Form::textarea('description',null,['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group">
-                    {!! Form::button('Update',['type' => 'submit', 'class'=>'btn btn-primary']) !!}
+                    {!! Form::label('note','Note') !!}
+                    {!! Form::text('note',null,['class'=>'form-control']) !!}
                 </div>
+                <div class="form-group">
+                    {!! Form::label('image','Tên image') !!}
+                    {!! Form::text('image',null,['class'=>'form-control']) !!}
+                </div>
+                <div class="form-group">
+                    {!! Form::label('course_id','Course') !!}
+                    {!! Form::text('course_id',1,['class'=>'form-control']) !!}
+                </div>
+                <div class="form-group">
+                    {!! Form::label('slide_id','Slide') !!}
+                    {!! Form::text('slide_id',null,['class'=>'form-control']) !!}
+                </div>
+                <div class="form-group">
+                    {!! Form::button('Create',['type' => 'submit', 'class'=>'btn btn-primary']) !!}
+                </div>
+                {!! Form::close() !!}
             </div>
         </div>
+        @if (count($errors) > 0)
+            <div class="alert alert-danger text-center">
+                @foreach ($errors->all() as $error)
+                    <div>{{ $error }}</div>
+                @endforeach
+            </div>
+        @endif
     </div>
 @endsection
