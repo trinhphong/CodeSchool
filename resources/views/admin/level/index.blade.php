@@ -24,10 +24,13 @@
                             <td>{{$level->name}}</td>
                             <td>{{$level->description}}</td>
                             <td>
-                                <a href="{{ route('course.edit', $level->id) }}" class="btn btn-primary">
+                                {!! Form::open(array('route'=>['level.destroy',$level->id],'method'=>'DELETE')) !!}
+                                <a href="{{ route('level.edit', $level->id) }}" class="btn btn-primary">
                                     Edit
                                     <span><i class="glyphicon glyphicon-edit"></i></span>
                                 </a>
+                                {!! Form::button('Delete',['class'=>'btn btn-danger','type'=>'submit']) !!}
+                                {!! Form::close() !!}
                             </td>
                         </tr>
                         @endforeach

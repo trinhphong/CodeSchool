@@ -36,17 +36,23 @@ class LevelController extends Controller
             'course_id' => $request->course_id,
             'slide_id' => $request->slide_id
         ]);
-        return redirect()->route('level.index','1')->with('message','Add Level successfully');
+        return redirect()->route('level.index','1')->with('message','Thêm Level Thành Công');
     }
 
     public function edit(Level $level)
     {
-        return view('levels.edit', compact('level'));
+        return view('/admin/level/edit', compact('level'));
     }
 
     public function update(Request $request, Level $level)
     {
         $level->update($request->all());
-        return redirect()->route('level.index')->with('message','update successfully');
+        return redirect()->route('level.index','1')->with('message','Cập nhật Level thành công');
+    }
+
+    public function destroy(Level $level)
+    {
+        $level->delete();
+        return redirect()->route('level.index','1')->with('message','Đã Xóa Level');
     }
 }
